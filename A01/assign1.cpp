@@ -16,20 +16,19 @@ int main(void)
     while (true)
     {
         // global variables reinitialize
-//        numericalGrade = 0.0;
-//        strcpy_s(letterGrade, MAXIMUM_CHAR, "");
-//        for (int i = 0; i < 5; i++)
-//        {
-//            eachAssigGrade[i] = 0;
-//        }
-//        strcpy_s(specialState, MAXIMUM_CHAR, "");
+        //numericalGrade = 0.0;
+        //strcpy_s(letterGrade, MAXIMUM_CHAR, "");
+        //for (int i = 0; i < 5; i++)
+        //{
+        //    eachAssigGrade[i] = 0;
+        //}
+        //strcpy_s(specialState, MAXIMUM_CHAR, "");
+
+
         char record[MAXIMUM_CHAR] = { 0 };
         char inputChar = 'P';
         char fileName[MAXIMUM_CHAR] = { 0 };
         int retCodeP = 0;
-
-        // initialize the input state
-        initializeInputState();
 
         printf("Enter Student's Grade(s) >>>  ");
         fgets(record, sizeof(record), stdin);
@@ -46,7 +45,7 @@ int main(void)
         // user is trying to specify an input test file
         if (sscanf_s(record, "%c %s", &inputChar, 1, fileName, MAXIMUM_CHAR) == 2)
         {
-            if (inputChar == 'Z')
+            if (inputChar == 'Z' && record[1] == ' ')
             { 
                 char* ptWhereCR = strchr(fileName, '\n');
                 if (ptWhereCR != NULL)
@@ -62,8 +61,8 @@ int main(void)
                 }
                 while (fgets(record, MAXIMUM_CHAR, pt) != NULL)
                 {
-                    retCodeP = parseUserInput(record);
-                    showGrade(retCodeP);
+                    parseUserInput(record);
+                    //showGrade(retCodeP);
                 }
                 if (!feof(pt))
                 {
@@ -77,8 +76,7 @@ int main(void)
             }            
         }
         // If not “X” or “Z …” then pass the user input into parseUserInput() for further processing
-        retCodeP = parseUserInput(record);
-        showGrade(retCodeP);
+        parseUserInput(record);
     }
     return 0;
 }

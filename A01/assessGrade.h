@@ -30,13 +30,12 @@
 
 // function prototypes for overload functions
 // for examining if the student passed or failed or had a special situation
-int assessGrade(double);
-int assessGrade(char *);
-int assessGrade(int[]);
+void assessGrade(double);
+void assessGrade(char *);
+void assessGrade(int[]);
 
 // function prototypes for determining the input and extract data
-void initializeInputState(void);
-int parseUserInput(char*);
+void parseUserInput(char*);
 
 // function prototypes for showing the Grade
-void showGrade(int retCodeP);
+//void showGrade(int retCodeP);
