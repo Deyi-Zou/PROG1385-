@@ -11,9 +11,10 @@
 /* FUNCTION : parseUserInput( input string)                           */
 /* PURPOSE  : This function takes string input and determines         */
 /*            what kind of input the user entered and                 */
-/*            extracted the data from the user’s input string         */
+/*            extracted the data from the user’s input string then    */
+/*            overload functions                                      */
 /* INPUTS   : a C-Style string                                        */
-/* RETURNS  : extracted content from input string or error statement  */
+/* RETURNS  : nothing                                                 */
 /* ================================================================== */
 void parseUserInput(char* record)
 {
@@ -52,9 +53,10 @@ void parseUserInput(char* record)
 /* PURPOSE  : This function takes the double data extracted by  */
 /*            parseUserInput fuction and examine if the student */
 /*            passed or failed or had a special situation.      */
+/*            then print it.                                    */
 /* INPUTS   : numericalGrade - double float,                    */
 /*                             value between 0 and 100          */
-/* RETURNS  : an int, indicates the grade state                 */
+/* RETURNS  : nothing                                           */
 /* ============================================================ */
 void assessGrade(double numericalGrade)
 {
@@ -76,11 +78,12 @@ void assessGrade(double numericalGrade)
 /* FUNCTION : assessGrade( letterGrade)                           */
 /* PURPOSE  : This function takes the string data extracted by    */
 /*            parseUserInput fuction and examine if the student   */
-/*            passed or failed or had a special situation.        */
+/*            passed or failed or had a special situation,        */
+/*            then print it.                                      */
 /* INPUTS   : letterGrade - string, below are valid               */
 /*                         "A+", "A", "B+", "B", "C+", "C",       */
 /*                         "D", "F", "I", "Q", "AU", "DNA", "I/P" */
-/* RETURNS  : an int, indicates the grade state                   */
+/* RETURNS  : nothing                                             */
 /* ============================================================== */
 void assessGrade(char* letterGrade)
 {
@@ -123,10 +126,11 @@ void assessGrade(char* letterGrade)
 /* FUNCTION : assessGrade( eachAssigGrade)                        */
 /* PURPOSE  : This function takes the int array data extracted    */
 /*            by parseUserInput fuction and examine if the        */
-/*            student passed or failed or had a special situation */
+/*            student passed or failed or had a rrror input       */
+/*            then print it.                                      */
 /* INPUTS   : eachAssigGrade - int array,                         */
 /*                             value between 0 and 100            */
-/* RETURNS  : an int, indicates the grade state                   */
+/* RETURNS  : nothing                                             */
 /* ============================================================== */
 void assessGrade(int eachAssigGrade[])
 {

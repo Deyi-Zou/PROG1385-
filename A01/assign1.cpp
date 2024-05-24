@@ -28,7 +28,7 @@ int main(void)
         {
             if (inputChar == 'X')
             {
-                return EXIT;
+                return 0;
             }
         }
         // user is trying to specify an input test file
