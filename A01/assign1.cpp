@@ -16,18 +16,20 @@ int main(void)
     while (true)
     {
         // global variables reinitialize
-        numericalGrade = 0.0;
-        strcpy_s(letterGrade, MAXIMUM_CHAR, "");
-        for (int i = 0; i < 5; i++)
-        {
-            eachAssigGrade[i] = 0;
-        }
-        strcpy_s(specialState, MAXIMUM_CHAR, "");
-
+//        numericalGrade = 0.0;
+//        strcpy_s(letterGrade, MAXIMUM_CHAR, "");
+//        for (int i = 0; i < 5; i++)
+//        {
+//            eachAssigGrade[i] = 0;
+//        }
+//        strcpy_s(specialState, MAXIMUM_CHAR, "");
         char record[MAXIMUM_CHAR] = { 0 };
         char inputChar = 'P';
         char fileName[MAXIMUM_CHAR] = { 0 };
         int retCodeP = 0;
+
+        // initialize the input state
+        initializeInputState();
 
         printf("Enter Student's Grade(s) >>>  ");
         fgets(record, sizeof(record), stdin);

@@ -9,6 +9,24 @@
 #include <string.h>
 #include "assessGrade.h"
 
+// since the globals now only are needed in this file - they can be declared at the top of this .cpp
+double numericalGrade = 0.0;
+char letterGrade[MAXIMUM_CHAR] = { 0 };
+int eachAssigGrade[5] = { 0 };
+char specialState[MAXIMUM_CHAR] = { 0 };
+
+// function to initialize (and re-initialze) the variables to each input from the user
+void initializeInputState(void)
+{
+	numericalGrade = 0.0;
+	strcpy_s(letterGrade, MAXIMUM_CHAR, "");
+	for (int i = 0; i < 5; i++)
+	{
+		eachAssigGrade[i] = 0;
+	}
+	strcpy_s(specialState, MAXIMUM_CHAR, "");
+}
+
 /* ================================================================== */
 /* FUNCTION : parseUserInput( input string)                           */
 /* PURPOSE  : This function takes string input and determines         */

@@ -15,18 +15,18 @@
 #define ERROR 7
 #define SPECIAL 8
 
-#ifndef OOPS
+//#ifndef OOPS
 // global variables initialize
-double numericalGrade = 0.0;
-char letterGrade[MAXIMUM_CHAR] = { 0 };
-int eachAssigGrade[5] = { 0 };
-char specialState[MAXIMUM_CHAR] = { 0 };
-#else
-extern double numericalGrade;
-extern char letterGrade[MAXIMUM_CHAR];
-extern int eachAssigGrade[5];
-extern char specialState[MAXIMUM_CHAR];
-#endif
+//double numericalGrade = 0.0;
+//char letterGrade[MAXIMUM_CHAR] = { 0 };
+//int eachAssigGrade[5] = { 0 };
+//char specialState[MAXIMUM_CHAR] = { 0 };
+//#else
+//extern double numericalGrade;
+//extern char letterGrade[MAXIMUM_CHAR];
+//extern int eachAssigGrade[5];
+//extern char specialState[MAXIMUM_CHAR];
+//#endif
 
 // function prototypes for overload functions
 // for examining if the student passed or failed or had a special situation
@@ -35,6 +35,7 @@ int assessGrade(char *);
 int assessGrade(int[]);
 
 // function prototypes for determining the input and extract data
+void initializeInputState(void);
 int parseUserInput(char*);
 
 // function prototypes for showing the Grade
