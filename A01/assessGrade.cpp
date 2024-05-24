@@ -2,8 +2,6 @@
 /* PURPOSE  : This file contains all of the various         */
 /*            functions used to assess student grade        */
 /* ======================================================== */
-// only define OOPS here, preventing multiple declearation of golbal varibles
-//#define OOPS  
 
 #include <stdio.h>
 #include <string.h>
